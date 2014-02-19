@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+	background-color: #ffffff;
+}
+#wrap-all {
+	overflow: hidden;
+	position: relative;
+}
+#content {
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+}
+
+.content_child {
+  width: 100%;
+}
+/*1首页*/
+#content_index {
+  
+}
+#content_index_center {
+  
+}
+
+/*2植村秀变墨画眼线潮||*/
+#content_conic {
+  
+}
+#content_conic_center {
+  
+}
+
+/*3 60款眼线妆*/
+#content_linerlook {
+  
+}
+#content_linerlook_center{
+  
+}
+/*4 60款眼线妆2*/
+#content_linerlook2 {
+  
+}
+#content_linerlook2_center {
+  
+}
+/*5 化妆箱里面的秘密*/
+#content_artist {
+  
+}
+#content_artist_center {
+  
+}

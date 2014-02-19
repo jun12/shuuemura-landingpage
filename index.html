@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+    <link href="style/main.css" type="text/css" rel="stylesheet">
+    <title>PUMA evoPOWER</title>
+    <script>
+      function fBrowserRedirect() {
+        var ua = navigator.userAgent.toLowerCase();
+        var Android = String(ua.match(/android/i)) == "android";
+        var iPad = String(ua.match(/ipad/i)) == "ipad";
+        var iPhone = String(ua.match(/iphone/i)) == "iphone";
+        if (!Android && !iPad && !iPhone) {
+          window.location = '../';
+        }
+      }
+
+      //fBrowserRedirect();
+    </script>
+  </head>
+  <body>
+    <div id="wrap-all">
+      <div id="content">
+        <!-- 1首页 -->
+        <div id="content_index" class="content_child">
+          <div id="content_index_center">
+          </div>
+        </div>
+        <!-- 2植村秀变墨画眼线潮|| -->
+        <div id="content_conic" class="content_child">
+          <div id="content_conic_center">
+          </div>
+        </div>
+        <!-- 3 60款眼线妆 -->
+        <div id="content_linerlook" class="content_child">
+          <div id="content_linerlook_center">
+          </div>
+        </div>
+        <!-- 4 60款眼线妆2 -->
+        <div id="content_linerlook2" class="content_child">
+          <div id="content_linerlook2_center">
+          </div>
+        </div>
+        <!-- 5 化妆箱里面的秘密 -->
+        <div id="content_artist" class="content_child">
+          <div id="content_artist_center">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
