@@ -1,58 +1,386 @@
 * {
   margin: 0px;
   padding: 0px;
+  list-style: none;
 }
+.clear{clear:both;}
 body {
-	background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 #wrap-all {
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 }
 #content {
-	width: 100%;
-	left: 0px;
-	top: 0px;
-	position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
 }
 
 .content_child {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#content.contentTransition {
+  transition: top .5s linear;
+  -webkit-transition: top .5s linear;
+  -moz-transition: top .5s linear;
+  -o-transition: top .5s linear;
+  -ms-transition: top .5s linear;
 }
 /*1首页*/
 #content_index {
-  
+  margin: auto;
+  background: url("../images/kv.jpg") no-repeat;
+  background-size: 100% auto;
 }
 #content_index_center {
-  
+  width: 31px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 60px;
 }
-
+.kv-word {
+  display: block;
+  width: 97px;
+  height: 31px;
+  background: url("../images/kv_word.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+#kv-btn {
+  display: block;
+  width: 94px;
+  height: 20px;
+  position: absolute;
+  background: url("../images/kv_buy.jpg") no-repeat;
+  background-size: contain;
+  top: 36px;
+  left: 10px;
+}
 /*2植村秀变墨画眼线潮||*/
-#content_conic {
-  
+#content_conic {/*
+  margin: auto;
+  background: url("../images/box1_f2.jpg") no-repeat;
+  background-size: 100% auto;*/
 }
 #content_conic_center {
-  
+  width: 100%;
+  height: 100%;
+}
+.content_conic_head {
+  width: 184px;
+  height: 50px;
+  background: url("../images/eye-conic.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -92px;
+  z-index: 20;
+}
+.content_conic_content {
+  width: 191px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  margin-left: -92px;
+  top: 35%;
+  margin-top: -75px;
+  z-index: 10;
 }
 
+.content_conic_footer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left:0px;
+  bottom: 0px;
+}
+
+.content_conic_footer img{
+  position: absolute;
+  left:0px;
+  bottom: 0px;
+}
+.content_conic_word {
+  display: block;
+  width: 191px;
+  height: 126px;
+  background: url("../images/step.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.content_conic_buy {
+  display: block;
+  width: 94px;
+  height: 20px;
+  position: absolute;
+  background: url("../images/kv_buy.jpg") no-repeat;
+  background-size: contain;
+  bottom: 0px;
+  left: 0px;
+}
 /*3 60款眼线妆*/
 #content_linerlook {
-  
 }
-#content_linerlook_center{
-  
+#content_linerlook_center {
+  width: 100%;
+  height: 100%;
+}
+.content_linerlook_head {
+  display:block;
+  width: 100%;
+  /*background: url("../images/box_2h.jpg") no-repeat;*/
+  background-size:100% auto;
+  margin: auto;
+}
+.content_linerlook_fotter {
+  display:block;
+  width: 100%;
+  /*background: url("../images/box_2f.jpg") no-repeat;*/
+  background-size: 100% auto;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 0;
 }
 /*4 60款眼线妆2*/
 #content_linerlook2 {
-  
 }
 #content_linerlook2_center {
-  
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.content_linerlook2_head {
+  width: 110px;
+  height: 43px;
+  background: url("../images/60looks.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  top: 15px;
+}
+.content_linerlook2_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+}
+.content_linerlook2_content_head {
+  display: block;
+  height: 20px;
+  width: 100%;
+  background-color: #000000;
+  margin: auto;
+  text-align: center;
+}
+#content_linerlook2_fotter {
+  display: block;
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  left: 10%;
+  bottom: 30px;
+  background-color: rgb(255, 3, 3);
+  background-size: contain;
+  border-radius: 10px;
+}
+
+#content_linerlook2_fotter b{
+  width:50px;
+  height:11px;
+  display:block;
+  position:absolute;top:0px;
+  line-height: 40px;
+  z-index: 10
+}
+#content_linerlook2_fotter b.b1 {
+  left: 0px;
+}
+#content_linerlook2_fotter b.b2 {
+  left:50%;
+  margin-left: -25px;
+}
+
+#content_linerlook2_fotter b.b3 {
+  right: 0px;
+}
+#bottomBar {
+  height: 300%;
+  width: 42px;
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  margin-left: -21px;
+  z-index: 10000;
+}
+.userhead-a{
+  opacity:0.4;
+  filter:alpha(opacity=40);
 }
 /*5 化妆箱里面的秘密*/
 #content_artist {
-  
 }
 #content_artist_center {
-  
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 0px;
 }
+
+.content_artist_head {
+  width: 183px;
+  height: 80px;
+  background: url("../images/5step.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  margin-left: -92px;
+  top: 0px;
+  z-index: 10000;
+}
+
+.swipe {
+  width: 100%;
+  position: relative;
+  height: 263px;
+  float: left;
+  top: 50px;
+  left: 0px;
+}
+.swipe-wrap {
+  width: 700%;
+  position: absolute;
+  height: 263px;
+  left: 0px;
+  top: 0px;
+}
+.swipe-wrap > div {
+  float: left;
+  width: 14.28%;
+  height: 263px;
+  position: relative;
+}
+
+.swipe-wrap > div > span {
+  display: block;
+  width: 223px;
+  height: 263px;
+  margin: auto;
+}
+
+.swipe-wrap > div > span > b {
+  display: block;
+  width: 94px;
+  height: 20px;
+  background: url("../images/kv_buy.jpg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  margin-left: -47px;
+  bottom: -40px;
+}
+.swipe-wrap.contentTransition {
+  transition: left .5s linear;
+  -webkit-transition: left .5s linear;
+  -moz-transition: left .5s linear;
+  -o-transition: left .5s linear;
+  -ms-transition: left .5s linear;
+}
+.toleft {
+  width: 33px;
+  height: 52px;
+  background: url("../images/toleft.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -26px;
+  z-index: 1000;
+  display: none;
+}
+.toRight {
+  width: 33px;
+  height: 52px;
+  background: url("../images/toright.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -26px;
+  z-index: 1000;
+}
+.content_artist_footer {
+  width: 320px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  bottom: 0px;
+}
+
+ul#position {
+  display: block;
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+ul#position li {
+  float: left;
+  display: block;
+  margin-left: 5px;
+  width: 54px;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+}
+ul#position li span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 20px;
+  float: left;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+ul#position li.on span {
+  background: red;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: #fff0;
+  margin-top: 0px;
+  line-height: 24px;
+}
+ul#position li.on b {
+  color: red;
+}
+ul#position li b {
+  float: left;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
