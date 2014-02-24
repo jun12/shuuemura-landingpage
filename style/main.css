@@ -91,7 +91,7 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -92px;
-  top: 35%;
+  top: 40%;
   margin-top: -75px;
   z-index: 10;
 }
@@ -135,6 +135,8 @@ body {
 #content_linerlook_center {
   width: 100%;
   height: 100%;
+   background: url("../images/peobig.jpg") no-repeat center center;
+  background-size: 100% auto;
 }
 .content_linerlook_head {
   display:block;
@@ -194,8 +196,8 @@ body {
   height: 5px;
   position: absolute;
   left: 10%;
-  bottom: 30px;
-  background-color: rgb(255, 3, 3);
+  bottom: 50px;
+  background-color: #ed0c6e;
   background-size: contain;
   border-radius: 10px;
 }
@@ -220,12 +222,12 @@ body {
   right: 0px;
 }
 #bottomBar {
-  height: 300%;
-  width: 42px;
+  height: 500%;
+  width: 60px;
   position: absolute;
   left: 50%;
-  top: -6px;
-  margin-left: -21px;
+  top: -12px;
+  margin-left: -30px;
   z-index: 10000;
 }
 .userhead-a{
@@ -304,8 +306,8 @@ body {
   -ms-transition: left .5s linear;
 }
 .toleft {
-  width: 33px;
-  height: 52px;
+  width: 36px;
+  height: 36px;
   background: url("../images/toleft.png") no-repeat;
   background-size: contain;
   position: absolute;
@@ -316,8 +318,8 @@ body {
   display: none;
 }
 .toRight {
-  width: 33px;
-  height: 52px;
+  width: 36px;
+  height: 36px;
   background: url("../images/toright.png") no-repeat;
   background-size: contain;
   position: absolute;
@@ -371,12 +373,14 @@ ul#position li.on span {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  background: #fff0;
+  background: #ed0c6e;
   margin-top: 0px;
   line-height: 24px;
+  font-size: 20px;
+  font-weight: bolder;
 }
 ul#position li.on b {
-  color: red;
+  color: #ed0c6e;
 }
 ul#position li b {
   float: left;

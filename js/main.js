@@ -8,6 +8,16 @@ var Iteam = {
   init : function() {
     this.autoSize();
     this.addEvent();
+    this.loaderImg();
+  },
+  loaderImg:function() {
+    for(var i=1; i < 7; i++ ) {
+      var img = new Image();
+      img.src = "images/e"+i+".jpg";
+      img.onload=function () {
+        //console.log("图片加载完成");
+      };
+    }
   },
   autoSize : function() {
     $("#wrap-all").height($(window).height()).width($(window).width());
@@ -144,21 +154,39 @@ var Slider = {
 };
 var TouchBar = {
   obj : document.getElementById('bottomBar'),
+  lineBar:document.getElementById('content_linerlook2_fotter'),
   startX:0,
   currIndex:6,
   /* 移动每段距离
    */
   distance:($("#content_linerlook2_fotter").width() - $("#bottomBar").width())/6,
-  maxX:$("#content_linerlook2_fotter").width() - $("#bottomBar").width()+ 20,
+  maxX:$("#content_linerlook2_fotter").width() - $("#bottomBar").width()+ 30,
   init : function() {
-    $(".userhead-"+TouchBar.currIndex).addClass("userhead-a");
     var That = this;
     That.obj.addEventListener("touchstart", this.touchBarStart, false);
     That.obj.addEventListener("touchmove", this.touchBarMove, false);
     That.obj.addEventListener("touchend", this.touchBarEnd, false);
+    TouchBar.lineBar.addEventListener("touchstart", this.lineBarTap, false);
+  },
+  lineBarTap:function(e) {
+    var obj = document.getElementById('bottomBar');
+    if (e.targetTouches.length == 1) {
+      var touch = e.targetTouches[0];
+      TouchBar.startX = obj.offsetLeft - touch.pageX;
+      var currLeft = (TouchBar.startX+touch.pageX)+$("#bottomBar").width()/2;
+     if(currLeft > 30  && currLeft < TouchBar.maxX) {
+       
+       if(parseInt((currLeft-20)/TouchBar.distance)+1 != TouchBar.currIndex) {
+         TouchBar.currIndex = parseInt((currLeft-30)/TouchBar.distance)+1;
+         $(".content_linerlook2_content_img img")[0].src = "images/e"+TouchBar.currIndex+".jpg";
+       }
+       obj.style.left = touch.pageX - $("#bottomBar").width()/2 +"px";
+     }
+      //TouchBar.touchBarMove(e);
+      //console.log();
+    }
   },
   touchBarStart:function(e) {
-    console.log("start");
     var obj = document.getElementById('bottomBar');
     if (e.targetTouches.length == 1) {
       var touch = e.targetTouches[0];
@@ -170,14 +198,11 @@ var TouchBar = {
     if (e.targetTouches.length == 1) {
      var touch = e.targetTouches[0];
      var currLeft = (TouchBar.startX+touch.pageX)+$("#bottomBar").width()/2;
-     if(currLeft > 20  && currLeft < TouchBar.maxX) {
+     if(currLeft > 30  && currLeft < TouchBar.maxX) {
        
        if(parseInt((currLeft-20)/TouchBar.distance)+1 != TouchBar.currIndex) {
-         // $(".userhead-"+TouchBar.currIndex).removeClass("userhead-a");
-         TouchBar.currIndex = parseInt((currLeft-20)/TouchBar.distance)+1;
-         console.log(TouchBar.currIndex);
+         TouchBar.currIndex = parseInt((currLeft-30)/TouchBar.distance)+1;
          $(".content_linerlook2_content_img img")[0].src = "images/e"+TouchBar.currIndex+".jpg";
-         // $(".userhead-"+TouchBar.currIndex).addClass("userhead-a");
        }
        obj.style.left = currLeft +"px";
      }
